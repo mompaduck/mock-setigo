@@ -289,8 +289,8 @@ func main() {
 	mux.HandleFunc("/api/ssl/v1/collect/", handleCollect) // Trailing slash for path params
 	mux.HandleFunc("/api/ssl/v1/revoke", handleRevoke)
 
-	log.Println("Mock Setigo API Server listening on :8080")
-	if err := http.ListenAndServe(":8080", mux); err != nil {
+	log.Println("Mock Setigo API Server listening on :3001")
+	if err := http.ListenAndServe(":3001", mux); err != nil {
 		log.Fatal(err)
 	}
 }
